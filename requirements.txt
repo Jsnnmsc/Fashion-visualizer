@@ -1,0 +1,2 @@
+matplotlib==3.8.0
+opencv_python==4.9.0.80
