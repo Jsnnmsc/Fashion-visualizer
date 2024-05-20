@@ -5,7 +5,7 @@
 ![visualize image](visualize.png)
 
 > [!NOTE] 
-> 1000 iterations have been passed so far
+> 5,000 iterations have been passed so far
 
 This is a Fashion-visualizer based on finetuned detectron2 model with iMaterialist FGVC7 dataset.
 
@@ -29,34 +29,37 @@ CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install ...
 
 Then use `pip install -r requirements.txt` to install package from requirements.txt file.
 
+> [!NOTE]
+>Because the github LFS bandwidth limit, so I put the .pth files on my google-drive where you can download and put into config folder straightly. 2024/5/20 [Download link](https://drive.google.com/drive/folders/1A4bHDKO4idvPCI69rpwVZwnMJ48FTD_M?usp=sharing)
+
 ## How to use
 
 Using CLI to interact with visualizer.
 
 **Command line interface**
 ```
-usage: Fashion-visualizer.py [-h] [--path PATH] [--th TH] [--wt WT] [--md MD]
+usage: Fashion-visualizer.py [-h] [--pt PT] [--th TH] [--wt WT] [--md MD]
 
 --- Fashion-visualizer ---
 
 options:
-  -h, --help   show this help message and exit
-  --path PATH  Input image path
-  --th TH      Prediction thershold
-  --wt WT      Model weight file path
-  --md MD      Metadata json path
+  -h, --help  show this help message and exit
+  --pt PT     Input image path
+  --th TH     Prediction thershold
+  --wt WT     Model weight file(V1)
+  --md MD     Metadata json path
 ```
 
 ### Basic usage
 
 Set predict image path.
 ```
-python Fashion-visualizer.py --path /YOUR_IMAGE_PATH
+python Fashion-visualizer.py --pt /YOUR_IMAGE_PATH
 ```
 
-Adjust the threshold for the prediction, which defaults to **0.7** .
+Adjust the threshold for the prediction, which defaults to **0.7**, also can change the weight file of the model.
 ```
-python Fashion-visualizer.py --path /YOUR_IMAGE_PATH --th 0.8
+python Fashion-visualizer.py --pt /YOUR_IMAGE_PATH --th 0.8 --wt V2
 ```
 
 ## In progress
@@ -65,9 +68,9 @@ In the future, models with more iterations will be released, so you can change t
 
 **Model list**
 
-:heavy_check_mark: model_v1 - 1,000 passed iteration
-- [ ] model_v2 - 5,000 passed iteration
-- [ ] model_v3 - 10,000 passed iteration
+:heavy_check_mark: modelV1 - 1,000 passed iteration  
+:heavy_check_mark: modelV2 - 5,000 passed iteration
+- [ ] modelV3 - 10,000 passed iteration
 
 ## License
 

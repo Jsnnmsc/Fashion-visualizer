@@ -17,15 +17,15 @@ class Fashion_visualizer:
 
     def get_parser(self):
         parser = argparse.ArgumentParser(description="--- Fashion-visualizer ---")
-        parser.add_argument("--path", type=str, help="Input image path")
+        parser.add_argument("--pt", type=str, help="Input image path")
         parser.add_argument(
-            "--th", type=float, default=0.7, help="Prediction thershold"
+            "--th", type=float, default=0.8, help="Prediction thershold(Default: 0.8)"
         )
         parser.add_argument(
             "--wt",
             type=str,
-            default="config/model_v1.pth",
-            help="Model weight file path",
+            default="V1",
+            help="Model weight file(V1/V2)",
         )
         parser.add_argument(
             "--md",
@@ -56,10 +56,8 @@ class Fashion_visualizer:
             )
         )
         cfg.MODEL.WEIGHTS = weight_path
-        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = (
-            threshold  # set the testing threshold for this model
-        )
-        cfg.MODEL.ROI_HEADS.NUM_CLASSES = 46  # 46 classes in
+        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = threshold
+        cfg.MODEL.ROI_HEADS.NUM_CLASSES = 46
         predictor = DefaultPredictor(cfg)
 
         im = cv2.imread(image_path)
@@ -75,7 +73,7 @@ class Fashion_visualizer:
 
         v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
 
-        plt.figure(figsize=(8, 8))
+        plt.figure(figsize=(10, 10))
         plt.imshow(v.get_image()[:, :, ::-1])
         plt.draw()
         plt.waitforbuttonpress(0)
@@ -88,7 +86,8 @@ def main():
     if v.args.path and v.args.th and v.args.wt:
         image_path = v.args.path
         threshold = v.args.th
-        weight_path = v.args.wt
+        weight_path = f"config/model{v.args.wt}.pth"
+        # weight_path = f"private/models/model{v.args.wt}.pth"
     else:
         raise KeyError("Input error")
 
