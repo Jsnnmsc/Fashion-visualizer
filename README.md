@@ -9,8 +9,8 @@
 
 This is a Fashion-visualizer based on finetuned detectron2 model with iMaterialist FGVC7 dataset.
 
-- [Detectron2]("https://github.com/facebookresearch/detectron2/tree/main") is an open-source object detection and segmentation framework developed by Meta. It provides a flexible and extensible platform for building and training state-of-the-art models for various computer vision tasks, including object detection, instance segmentation, and semantic segmentation.
-- [iMaterialist FGVC7]("https://www.kaggle.com/c/imaterialist-fashion-2020-fgvc7") is a large-scale fashion dataset created for the Fashion and Apparel Classification Challenge. It consists of a diverse collection of fashion images sourced from various e-commerce platforms and annotated with fine-grained labels.
+- [Detectron2](https://github.com/facebookresearch/detectron2/tree/main) is an open-source object detection and segmentation framework developed by Meta. It provides a flexible and extensible platform for building and training state-of-the-art models for various computer vision tasks, including object detection, instance segmentation, and semantic segmentation.
+- [iMaterialist FGVC7](https://www.kaggle.com/c/imaterialist-fashion-2020-fgvc7) is a large-scale fashion dataset created for the Fashion and Apparel Classification Challenge. It consists of a diverse collection of fashion images sourced from various e-commerce platforms and annotated with fine-grained labels.
 
 ## Requirements
 
