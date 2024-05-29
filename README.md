@@ -5,7 +5,7 @@
 ![visualize image](visualize.png)
 
 > [!NOTE] 
-> 5,000 iterations have been passed so far
+> 10,000 iterations have been passed so far
 
 This is a Fashion-visualizer based on finetuned detectron2 model with iMaterialist FGVC7 dataset.
 
@@ -30,7 +30,7 @@ CC=clang CXX=clang++ ARCHFLAGS="-arch x86_64" python -m pip install ...
 Then use `pip install -r requirements.txt` to install package from requirements.txt file.
 
 > [!NOTE]
->Because the github LFS bandwidth limit, so I put the .pth files on my google-drive where you can download and put into config folder straightly. 2024/5/20 [Download link](https://drive.google.com/drive/folders/1A4bHDKO4idvPCI69rpwVZwnMJ48FTD_M?usp=sharing)
+>Because of github LFS bandwidth limit, so I put the .pth files on my google-drive where you can download and put into config folder straightly. 2024/5/20 [Download link](https://drive.google.com/drive/folders/1A4bHDKO4idvPCI69rpwVZwnMJ48FTD_M?usp=sharing)
 
 ## How to use
 
@@ -68,9 +68,11 @@ In the future, models with more iterations will be released, so you can change t
 
 **Model list**
 
-:heavy_check_mark: modelV1 - 1,000 passed iteration  
-:heavy_check_mark: modelV2 - 5,000 passed iteration
-- [ ] modelV3 - 10,000 passed iteration
+:heavy_check_mark: modelV1 - 1,000 passed iteration   
+:heavy_check_mark: modelV2 - 5,000 passed iteration  
+:heavy_check_mark: modelV3 - 10,000 passed iteration  
+- [ ] modelV4 - 20,000 passed iteration
+
 
 ## License
 
