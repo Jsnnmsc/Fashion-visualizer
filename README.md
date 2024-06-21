@@ -71,7 +71,8 @@ In the future, models with more iterations will be released, so you can change t
 :heavy_check_mark: modelV1 - 1,000 passed iteration   
 :heavy_check_mark: modelV2 - 5,000 passed iteration  
 :heavy_check_mark: modelV3 - 10,000 passed iteration  
-- [ ] modelV4 - 20,000 passed iteration
+:heavy_check_mark: modelV4 - 20,000 passed iteration
+### WIP
 
 
 ## License
