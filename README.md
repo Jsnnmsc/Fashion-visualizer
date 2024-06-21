@@ -57,9 +57,9 @@ Set predict image path.
 python Fashion-visualizer.py --pt /YOUR_IMAGE_PATH
 ```
 
-Adjust the threshold for the prediction, which defaults to **0.7**, also can change the weight file of the model.
+Adjust the threshold for the prediction, which defaults to **0.8**, also can change the weight file of the model.
 ```
-python Fashion-visualizer.py --pt /YOUR_IMAGE_PATH --th 0.8 --wt V2
+python Fashion-visualizer.py --pt /YOUR_IMAGE_PATH --th 0.7 --wt V2
 ```
 
 ## In progress

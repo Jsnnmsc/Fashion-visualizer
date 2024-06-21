@@ -24,8 +24,8 @@ class Fashion_visualizer:
         parser.add_argument(
             "--wt",
             type=str,
-            default="V1",
-            help="Model weight file(V1/V2)",
+            default="V4",
+            help="Model weight file(V1/V2/V3/V4)",
         )
         parser.add_argument(
             "--md",
@@ -83,8 +83,8 @@ class Fashion_visualizer:
 def main():
     v = Fashion_visualizer()
 
-    if v.args.path and v.args.th and v.args.wt:
-        image_path = v.args.path
+    if v.args.pt and v.args.th and v.args.wt:
+        image_path = v.args.pt
         threshold = v.args.th
         weight_path = f"config/model{v.args.wt}.pth"
         # weight_path = f"private/models/model{v.args.wt}.pth"
