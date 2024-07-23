@@ -5,7 +5,7 @@
 ![visualize image](visualize.png)
 
 > [!NOTE] 
-> 10,000 iterations have been passed so far
+> 20,000 iterations have been passed so far
 
 This is a Fashion-visualizer based on finetuned detectron2 model with iMaterialist FGVC7 dataset.
 
